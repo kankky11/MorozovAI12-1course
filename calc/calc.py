@@ -72,26 +72,25 @@ while True:
             result = name1 ** name2
             print(f"\nОтвет:  {result:.2f}")
     # финансовые операции
-    if operation not in ['1', '2', '3']:
-        if operation in ['1', '2', '3']:
-            if operation == '1':
-                total = 0
-                print("Вводите суммы расходов по одной. Чтобы закончить, просто нажмите Enter (оставьте строку пустой).")
-                while True:
-                    expenses = input("Введите расходы: ")
-                    if expenses == "":
-                        break
-                    amount = float(expenses)
-                    total += amount
-                print(f'\nСумма ваших расходов равна: {total:.2f}')
-            elif operation == '2':
-                budget = float(input("Введите бюджет: "))
-                days = float(input("Введите дни: "))
-                result = budget / days
-                print(f'\nВаша стоимость поездки на день: {result:.2f}')
-            elif operation == '3':
-                budget = float(input("Введите бюджет: "))
-                expenses = float(input("Введите расходы: "))
-                result = budget - expenses
-                print(f'\nВаш оставшийся бюджет: {result:.2f}')
+    if operation in ['1', '2', '3']:
+        if operation == '1':
+            total = 0
+            print("Вводите суммы расходов по одной. Чтобы закончить, просто нажмите Enter (оставьте строку пустой).")
+            while True:
+                expenses = input("Введите расходы: ")
+                if expenses == "":
+                    break
+                amount = float(expenses)
+                total += amount
+            print(f'\nСумма ваших расходов равна: {total:.2f}')
+        elif operation == '2':
+            budget = float(input("Введите бюджет: "))
+            days = float(input("Введите дни: "))
+            result = budget / days
+            print(f'\nВаша стоимость поездки на день: {result:.2f}')
+        elif operation == '3':
+            budget = float(input("Введите бюджет: "))
+            expenses = float(input("Введите расходы: "))
+            result = budget - expenses
+            print(f'\nВаш оставшийся бюджет: {result:.2f}')
     input("\nНажмите Enter, чтобы продолжить...")
