@@ -85,6 +85,15 @@ while True:
                 amount = float(expenses)
                 total += amount
             print(f'\nСумма ваших расходов равна: {total:.2f}')
+            print("\nВычесть расходы из бюджета? (1 - Да. 2 - Нет.)")
+            operation1 = input()
+            if operation1 == '1':
+                result = budget - expenses
+                print(f"\nВаш оставшийся бюджет: {result:.2f}")
+            elif operation1 == '2':
+                print("\nНичего не вычитаем.")
+            else:
+                print("\nНеверный ввод.")
         elif operation == '2':
             days = float(input("Введите дни: "))
             result = budget / days
