@@ -32,9 +32,11 @@ while True:
         print("3 - Остаток бюджета")
         print("________________")
         print("\n0 - Завершить программу.")
+        print("\n________________")
+        budget = float(input("\nВведите бюджет для операций: "))
         print("________________")
     # классические операции
-    operation = input("Введите операцию: ")
+    operation = input("\nВведите операцию: ")
     if operation == '0':
         print("\nДо свидания, " + name + "!")
         exit()
@@ -84,12 +86,10 @@ while True:
                 total += amount
             print(f'\nСумма ваших расходов равна: {total:.2f}')
         elif operation == '2':
-            budget = float(input("Введите бюджет: "))
             days = float(input("Введите дни: "))
             result = budget / days
             print(f'\nВаша стоимость поездки на день: {result:.2f}')
         elif operation == '3':
-            budget = float(input("Введите бюджет: "))
             expenses = float(input("Введите расходы: "))
             result = budget - expenses
             print(f'\nВаш оставшийся бюджет: {result:.2f}')
