@@ -1,0 +1,25 @@
+import random
+number = random.randint(10, 99)
+attempts = 0
+while True:
+    print("Компьютер загадал одно целое число от 10 до 99. Попробуй угадать его!")
+    while True:
+        attempt = int(input("\nВведите свой вариант числа: "))
+        attempts += 1
+        if attempt < number:
+            print("ТЕПЛЕЕ")
+        elif attempt > number:
+            print("ХОЛОДНЕЕ")
+        else:
+            print(f"Ты выиграл! Ты угадал число {number} за {attempts} попыток!")
+            break
+    while True:
+        print("\nСыграть ещё раз?")
+        print("1 - Да")
+        print("2 - Нет")
+        replay = input("Ввод: ")
+        if replay == "1":
+            break
+        elif replay == "2":
+            print("Конец игры. До свидания!")
+            exit()
