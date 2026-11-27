@@ -44,6 +44,12 @@ while True:
         elif len(books) < 5:
             print(books)
 
+    elif mode == '4':
+        index = input("Введите номер книги: ").strip()
+        
+
+
+
     elif mode == '0':
         print("До свидания!")
         break
